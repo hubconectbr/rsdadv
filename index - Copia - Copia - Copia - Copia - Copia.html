@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Meta Tags Avançadas -->
+    <title>Rodrigues Dalsasso - Advocacia & Consultoria</title>
+    <meta name="description" content="Escritório de advocacia liderado pelo Dr. Frank Willian (OAB/TO 8260). Especialistas em Direito Civil, Penal, Trabalhista, e Logística Jurídica de excelência no Tocantins.">
+    <meta name="keywords" content="Advogado Palmas, Correspondente Jurídico Tocantins, Direito Civil, Advogado Criminalista, Logística Jurídica">
+    <meta name="author" content="Rodrigues Dalsasso Advocacia">
+    
+    <!-- Open Graph (Partilha em Redes Sociais e WhatsApp) -->
+    <meta property="og:title" content="Rodrigues Dalsasso - Advocacia & Consultoria">
+    <meta property="og:description" content="Justiça redefinida. Soluções jurídicas estratégicas e apoio B2B no coração do Tocantins.">
+    <meta property="og:image" content="images/logomarca_rsdv.png">
+    <meta property="og:type" content="website">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        
+        :root {
+            --navy: #0A1A3C;
+            --graphite: #333F48;
+            --gold: #C5A059;
+            --ice: #F8F9FA;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--ice);
+            color: var(--graphite);
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .navy-bg { background-color: var(--navy); }
+        .navy-text { color: var(--navy); }
+        .gold-text { color: var(--gold); }
+        .gold-bg { background-color: var(--gold); }
+        .gold-border { border-color: var(--gold); }
+        
+        /* Background Texturizado com 80% de transparência branca */
+        .textured-section {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('images/backround_transparencia_1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Video Background Styling */
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            background-color: var(--navy);
+        }
+
+        .video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(10, 26, 60, 0.94) 0%, rgba(51, 63, 72, 0.88) 100%);
+            z-index: 1;
+        }
+
+        .content-over-video {
+            position: relative;
+            z-index: 2;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(197, 160, 89, 0.1);
+            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background: var(--gold);
+            margin: 1.5rem auto 0;
+        }
+
+        .news-card img {
+            transition: transform 0.6s ease;
+        }
+        .news-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+        .faq-item.active i {
+            transform: rotate(180deg);
+            color: var(--gold);
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: white;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .btn-gold:hover {
+            background-color: #b38f4d;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Linha Dourada de Destaque */
+        .gold-line {
+            height: 3px;
+            width: 100%;
+            background: linear-gradient(90deg, rgba(197,160,89,0) 0%, rgba(197,160,89,1) 50%, rgba(197,160,89,0) 100%);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navegação -->
+    <nav class="fixed w-full z-50 transition-all duration-500 navy-bg shadow-2xl py-3 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-4 group cursor-pointer">
+                    <!-- Logo Oficial do Escritório -->
+                    <img src="images/logomarca_rsdv.png" alt="Logo Rodrigues Dalsasso" class="h-12 w-auto transition-transform duration-500 group-hover:scale-105">
+                    <div class="leading-tight border-l gold-border pl-4 hidden sm:block">
+                        <span class="block text-lg font-bold tracking-[0.1em] text-white">RODRIGUES DALSASSO</span>
+                        <span class="block text-[10px] uppercase tracking-[0.4em] font-medium gold-text">ADVOCACIA & CONSULTORIA</span>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center space-x-8 text-xs lg:text-[10px] uppercase tracking-[0.2em] font-semibold text-white/70">
+                    <a href="#inicio" class="nav-link hover:text-white transition-colors">Início</a>
+                    <a href="#sobre" class="nav-link hover:text-white transition-colors">Sobre</a>
+                    <a href="#perfil" class="nav-link hover:text-white transition-colors">O Advogado</a>
+                    <a href="#atuacao" class="nav-link hover:text-white transition-colors">Áreas</a>
+                    <a href="#noticias" class="nav-link hover:text-white transition-colors text-amber-500 font-bold">Notícias</a>
+                    <a href="#contato" class="btn-gold px-6 py-3 rounded-sm text-white transition-all uppercase tracking-widest text-[10px]">Atendimento</a>
+                </div>
+                <!-- Acessibilidade: aria-label -->
+                <button onclick="toggleMobileMenu()" class="lg:hidden text-white" aria-label="Abrir menu de navegação">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Linha dourada logo abaixo do topo do menu -->
+        <div class="gold-line"></div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 border-t border-white/5 p-6 space-y-4">
+            <a href="#inicio" class="block text-white uppercase tracking-widest text-sm" onclick="toggleMobileMenu()">Início</a>
+            <a href="#sobre" class="block text-white uppercase tracking-widest text-sm" onclick="toggleMobileMenu()">Sobre</a>
+            <a href="#perfil" class="block text-white uppercase tracking-widest text-sm" onclick="toggleMobileMenu()">O Advogado</a>
+            <a href="#atuacao" class="block text-white uppercase tracking-widest text-sm" onclick="toggleMobileMenu()">Áreas</a>
+            <a href="#noticias" class="block text-amber-500 uppercase tracking-widest text-sm font-bold" onclick="toggleMobileMenu()">Notícias</a>
+            <a href="#contato" class="block gold-text uppercase tracking-widest text-sm" onclick="toggleMobileMenu()">Contato</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="video-container h-screen flex items-center overflow-hidden">
+        <video autoplay muted loop playsinline class="video-bg" poster="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=80">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-legal-consultant-at-desk-with-book-and-scales-27038-large.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center text-white content-over-video" data-aos="fade-up" data-aos-duration="1200">
+            <h2 class="gold-text font-medium tracking-[0.4em] uppercase mb-6 text-xs">Dr. Frank Willian Rodrigues de Souza Dalsasso</h2>
+            <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold mb-8 leading-[1.1] serif-font">
+                Justiça <span class="italic font-light text-amber-100">Redefinida</span>.
+            </h1>
+            <p class="text-sm md:text-lg font-light mb-12 max-w-2xl mx-auto opacity-80 leading-relaxed italic">
+                A união entre o rigor técnico clássico e a agilidade exigida pela modernidade jurídica no coração do Tocantins.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#noticias" class="px-10 py-5 bg-white text-slate-900 font-bold tracking-[0.2em] rounded-sm shadow-2xl hover:bg-amber-600 hover:text-white transition-all text-[11px] md:text-xs uppercase">VER NOVIDADES</a>
+                <a href="https://wa.me/5563999999999" target="_blank" class="px-10 py-5 border border-white/30 text-white font-bold tracking-[0.2em] rounded-sm hover:border-amber-600 hover:bg-amber-600 transition-all text-[11px] md:text-xs uppercase">
+                    <i class="fab fa-whatsapp mr-2 text-sm"></i> AGENDAR CONSULTA
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção de Prova Social (Estatísticas Animadas) -->
+    <div class="navy-bg border-y border-white/10 relative z-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-8 md:py-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
+                <div class="py-2" data-aos="fade-up" data-aos-delay="100">
+                    <span class="block text-4xl font-bold gold-text serif-font">+10</span>
+                    <span class="block text-xs uppercase tracking-widest text-white/70 mt-2 font-medium">Anos de Experiência</span>
+                </div>
+                <div class="py-2" data-aos="fade-up" data-aos-delay="200">
+                    <span class="block text-4xl font-bold gold-text serif-font">+500</span>
+                    <span class="block text-xs uppercase tracking-widest text-white/70 mt-2 font-medium">Casos e Diligências</span>
+                </div>
+                <div class="py-2" data-aos="fade-up" data-aos-delay="300">
+                    <span class="block text-4xl font-bold gold-text serif-font">+30</span>
+                    <span class="block text-xs uppercase tracking-widest text-white/70 mt-2 font-medium">Municípios Alcançados</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Wrapper para SEO -->
+    <main>
+        <!-- Sobre Section -->
+        <section id="sobre" class="py-32 textured-section relative">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="grid lg:grid-cols-2 gap-24 items-center">
+                    <div class="relative" data-aos="fade-right">
+                        <div class="aspect-[4/5] overflow-hidden rounded-sm shadow-2xl border-[15px] border-white/50">
+                            <!-- Lazy Loading aplicado -->
+                            <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&q=80&w=800" alt="Consultoria Jurídica no Tocantins" loading="lazy" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-8 -right-8 bg-slate-900 p-10 shadow-2xl border-l-4 gold-border hidden lg:block">
+                            <p class="serif-font text-4xl font-bold text-white leading-none">OAB/TO</p>
+                            <p class="gold-text font-bold tracking-[0.3em] text-xl mt-2">8260</p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left">
+                        <h2 class="text-4xl md:text-5xl font-bold navy-text mb-10 section-title text-left ml-0 after:ml-0">Exclusividade e Precisão</h2>
+                        <div class="space-y-6 text-gray-500 leading-relaxed text-base italic">
+                            <p>Fundado sob a liderança do <strong>Dr. Frank Willian</strong>, nosso escritório é uma sociedade individual pautada pela transparência absoluta e pelo compromisso com o resultado.</p>
+                            <p>Operamos de forma personalizada, tratando cada demanda não apenas como um processo, mas como um objetivo estratégico vital para nossos constituintes.</p>
+                            <div class="flex flex-col gap-6 pt-10">
+                                <div class="flex items-center gap-6">
+                                    <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-amber-600 border border-amber-100 shadow-sm shrink-0">
+                                        <i class="fas fa-landmark"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold navy-text text-sm uppercase tracking-widest">Sede em Palmas</h4>
+                                        <p class="text-xs md:text-sm opacity-80 mt-1">Posicionamento central nos tribunais do Tocantins.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-6">
+                                    <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-amber-600 border border-amber-100 shadow-sm shrink-0">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold navy-text text-sm uppercase tracking-widest">Agilidade Operacional</h4>
+                                        <p class="text-xs md:text-sm opacity-80 mt-1">Respostas rápidas em um mercado dinâmico.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perfil do Advogado Section -->
+        <section id="perfil" class="py-32 bg-white relative">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="grid lg:grid-cols-12 gap-16 items-start">
+                    <div class="lg:col-span-5" data-aos="fade-up">
+                        <div class="relative group">
+                            <div class="absolute -inset-4 gold-bg opacity-10 rounded-sm transition-all group-hover:opacity-20"></div>
+                            <div class="aspect-[4/5] bg-gray-100 rounded-sm overflow-hidden shadow-2xl border-b-8 gold-border">
+                                <!-- Lazy Loading -->
+                                <img src="images/ceo-e-socio-fundador-1.png" alt="Dr. Frank Willian Rodrigues de Souza Dalsasso" loading="lazy" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7" data-aos="fade-left">
+                        <span class="gold-text font-bold tracking-[0.4em] uppercase text-[10px] md:text-xs mb-4 block">Sócio Fundador</span>
+                        <h2 class="text-4xl md:text-5xl font-bold navy-text mb-6 serif-font">Frank Willian R. de S. Dalsasso</h2>
+                        <p class="text-amber-600 font-bold tracking-[0.1em] text-sm md:text-base mb-8">ADVOGADO | OAB/TO 8260</p>
+                        
+                        <div class="space-y-6 text-gray-500 leading-relaxed text-base">
+                            <p class="italic font-medium text-gray-700">"A advocacia não é apenas a aplicação fria da lei, mas a busca incansável por soluções que tragam paz social e segurança patrimonial aos nossos clientes."</p>
+                            
+                            <p>Com atuação consolidada no Estado do Tocantins, o Dr. Frank Willian destaca-se pela visão empreendedora e pela modernização dos serviços jurídicos. Sua trajetória é marcada pelo compromisso ético e pela entrega de resultados em casos de alta complexidade.</p>
+                            
+                            <div class="grid sm:grid-cols-2 gap-8 pt-6">
+                                <div class="p-6 bg-slate-50 border-t-2 gold-border shadow-sm">
+                                    <h4 class="font-bold navy-text text-xs md:text-sm uppercase mb-3 tracking-widest">Formação Acadêmica</h4>
+                                    <ul class="text-xs space-y-2 opacity-80 list-disc list-inside">
+                                        <li>Bacharel em Direito com foco em Gestão Jurídica.</li>
+                                        <li>Especialista em Logística Processual.</li>
+                                        <li>Membro Ativo da OAB Seccional Tocantins.</li>
+                                    </ul>
+                                </div>
+                                <div class="p-6 bg-slate-50 border-t-2 gold-border shadow-sm">
+                                    <h4 class="font-bold navy-text text-xs md:text-sm uppercase mb-3 tracking-widest">Atuação Estratégica</h4>
+                                    <ul class="text-xs space-y-2 opacity-80 list-disc list-inside">
+                                        <li>Consultoria em Direito Civil e Família.</li>
+                                        <li>Logística para Grandes Bancas Nacionais.</li>
+                                        <li>Gestão de Diligências e Audiências.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notícias Section -->
+        <section id="noticias" class="py-32 bg-slate-50 relative overflow-hidden">
+            <video autoplay muted loop playsinline class="video-bg opacity-5">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-businessman-browsing-news-on-his-laptop-27040-large.mp4" type="video/mp4">
+            </video>
+            
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 content-over-video">
+                <div class="text-center mb-20" data-aos="fade-up">
+                    <span class="gold-text font-bold tracking-[0.5em] uppercase text-xs">Informativo Jurídico</span>
+                    <h2 class="text-4xl md:text-5xl font-bold navy-text mt-4 section-title serif-font italic">Últimas Notícias</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <article class="news-card group bg-white shadow-sm overflow-hidden flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=800" alt="Direito Civil" loading="lazy" class="w-full h-full object-cover">
+                            <div class="absolute top-0 right-0 bg-amber-600 text-white text-[10px] md:text-xs font-bold px-4 py-2 m-4 uppercase tracking-widest">Civil</div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <time class="text-[10px] md:text-xs uppercase tracking-widest text-gray-400 block mb-4">07 de Março, 2024</time>
+                            <h3 class="text-xl font-bold navy-text mb-4 leading-tight group-hover:text-amber-600 transition-colors cursor-pointer serif-font">As novas diretrizes da responsabilidade civil nos contratos digitais.</h3>
+                            <p class="text-sm text-gray-500 mb-6 line-clamp-3 flex-grow">Entenda como as recentes decisões dos tribunais superiores estão moldando o futuro das indenizações em transações eletrônicas...</p>
+                            <a href="#" class="text-xs font-bold uppercase tracking-widest gold-text border-b border-transparent hover:border-amber-600 transition-all inline-block mt-auto w-max">Leia a matéria <i class="fas fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="news-card group bg-white shadow-sm overflow-hidden flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" alt="Direito Penal" loading="lazy" class="w-full h-full object-cover">
+                            <div class="absolute top-0 right-0 bg-slate-900 text-white text-[10px] md:text-xs font-bold px-4 py-2 m-4 uppercase tracking-widest">Penal</div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <time class="text-[10px] md:text-xs uppercase tracking-widest text-gray-400 block mb-4">05 de Março, 2024</time>
+                            <h3 class="text-xl font-bold navy-text mb-4 leading-tight group-hover:text-amber-600 transition-colors cursor-pointer serif-font">A importância da cadeia de custódia nas audiências criminais.</h3>
+                            <p class="text-sm text-gray-500 mb-6 line-clamp-3 flex-grow">Um guia detalhado sobre como a preservação de provas pode definir o rumo de um processo penal estratégico...</p>
+                            <a href="#" class="text-xs font-bold uppercase tracking-widest gold-text border-b border-transparent hover:border-amber-600 transition-all inline-block mt-auto w-max">Leia a matéria <i class="fas fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="news-card group bg-white shadow-sm overflow-hidden flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=800" alt="Trabalhista" loading="lazy" class="w-full h-full object-cover">
+                            <div class="absolute top-0 right-0 bg-amber-600 text-white text-[10px] md:text-xs font-bold px-4 py-2 m-4 uppercase tracking-widest">Trabalhista</div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <time class="text-[10px] md:text-xs uppercase tracking-widest text-gray-400 block mb-4">01 de Março, 2024</time>
+                            <h3 class="text-xl font-bold navy-text mb-4 leading-tight group-hover:text-amber-600 transition-colors cursor-pointer serif-font">Compliance Trabalhista: Prevenção estratégica de custos.</h3>
+                            <p class="text-sm text-gray-500 mb-6 line-clamp-3 flex-grow">Como as empresas tocantinenses podem se blindar juridicamente através de auditorias internas e revisão de contratos...</p>
+                            <a href="#" class="text-xs font-bold uppercase tracking-widest gold-text border-b border-transparent hover:border-amber-600 transition-all inline-block mt-auto w-max">Leia a matéria <i class="fas fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Áreas de Atuação -->
+        <section id="atuacao" class="py-32 textured-section">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="text-center mb-20" data-aos="fade-up">
+                    <span class="gold-text font-bold tracking-[0.5em] uppercase text-xs">Especialidades</span>
+                    <h2 class="text-4xl md:text-5xl font-bold navy-text mt-4 section-title serif-font italic">Frentes de Trabalho</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="glass-card p-10 rounded-sm" data-aos="zoom-in" data-aos-delay="100">
+                        <i class="fas fa-balance-scale-right text-3xl gold-text mb-8"></i>
+                        <h3 class="text-lg font-bold navy-text mb-4 uppercase tracking-widest">Civil</h3>
+                        <p class="text-xs md:text-sm text-gray-500 leading-relaxed">Contratos e responsabilidade civil pautada na proteção patrimonial.</p>
+                    </div>
+                    <div class="glass-card p-10 rounded-sm" data-aos="zoom-in" data-aos-delay="200">
+                        <i class="fas fa-users-viewfinder text-3xl gold-text mb-8"></i>
+                        <h3 class="text-lg font-bold navy-text mb-4 uppercase tracking-widest">Família</h3>
+                        <p class="text-xs md:text-sm text-gray-500 leading-relaxed">Divórcios e inventários tratados com o máximo sigilo e humanidade.</p>
+                    </div>
+                    <div class="glass-card p-10 rounded-sm" data-aos="zoom-in" data-aos-delay="300">
+                        <i class="fas fa-user-secret text-3xl gold-text mb-8"></i>
+                        <h3 class="text-lg font-bold navy-text mb-4 uppercase tracking-widest">Penal</h3>
+                        <p class="text-xs md:text-sm text-gray-500 leading-relaxed">Defesa criminal estratégica, desde o inquérito até os tribunais.</p>
+                    </div>
+                    <div class="glass-card p-10 rounded-sm" data-aos="zoom-in" data-aos-delay="400">
+                        <i class="fas fa-coins text-3xl gold-text mb-8"></i>
+                        <h3 class="text-lg font-bold navy-text mb-4 uppercase tracking-widest">Tributário</h3>
+                        <p class="text-xs md:text-sm text-gray-500 leading-relaxed">Planejamento fiscal visando a eficiência financeira do contribuinte.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Correspondência Jurídica -->
+        <section id="correspondencia" class="video-container py-40">
+            <video autoplay muted loop playsinline class="video-bg opacity-30">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-legal-consultation-close-up-of-hands-shaking-27045-large.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay" style="background: linear-gradient(to right, rgba(10, 26, 60, 0.96), rgba(10, 26, 60, 0.8))"></div>
+            
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 content-over-video">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div data-aos="fade-right">
+                        <span class="gold-text font-bold tracking-[0.4em] uppercase text-xs">Parcerias Nacionais</span>
+                        <h2 class="text-4xl md:text-5xl font-bold text-white mt-4 mb-8 serif-font italic leading-tight">Sua Sede Operacional <br> no Tocantins.</h2>
+                        <p class="text-base text-white/60 mb-10 italic">Logística de alto padrão para bancas que buscam agilidade em Palmas e região.</p>
+                        <div class="flex flex-wrap gap-6 md:gap-8 text-xs text-white/80 uppercase tracking-widest font-semibold">
+                            <div class="flex items-center gap-3"><i class="fas fa-check gold-text"></i> Audiências</div>
+                            <div class="flex items-center gap-3"><i class="fas fa-check gold-text"></i> Despachos</div>
+                            <div class="flex items-center gap-3"><i class="fas fa-check gold-text"></i> Diligências</div>
+                        </div>
+                    </div>
+                    <div class="bg-white/5 backdrop-blur-xl p-8 md:p-12 border border-white/10" data-aos="fade-left">
+                        <h3 class="text-sm font-bold text-white mb-8 border-b border-white/10 pb-4 uppercase tracking-[0.3em] gold-text">Abrangência TO</h3>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-y-6 text-xs text-white/70 font-semibold uppercase tracking-widest">
+                            <li><i class="fas fa-map-pin gold-text mr-3"></i> Palmas (Sede)</li>
+                            <li><i class="fas fa-map-pin gold-text mr-3"></i> Araguaína</li>
+                            <li><i class="fas fa-map-pin gold-text mr-3"></i> Gurupi</li>
+                            <li><i class="fas fa-map-pin gold-text mr-3"></i> Porto Nacional</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-32 textured-section">
+            <div class="max-w-3xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold navy-text section-title serif-font italic">Dúvidas Frequentes</h2>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="faq-item border-b border-gray-200 pb-4">
+                        <button class="w-full py-6 flex justify-between items-center text-left text-sm md:text-base font-bold navy-text uppercase tracking-widest group" aria-expanded="false" onclick="toggleFaq(this)">
+                            Qual o tempo de resposta para correspondência?
+                            <i class="fas fa-plus text-xs transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="py-4 text-sm text-gray-500 leading-relaxed italic">Confirmamos a disponibilidade em até 30 minutos e realizamos a entrega conforme o prazo processual rigorosamente estipulado.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item border-b border-gray-200 pb-4">
+                        <button class="w-full py-6 flex justify-between items-center text-left text-sm md:text-base font-bold navy-text uppercase tracking-widest group" aria-expanded="false" onclick="toggleFaq(this)">
+                            Realizam audiências virtuais?
+                            <i class="fas fa-plus text-xs transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="py-4 text-sm text-gray-500 leading-relaxed italic">Sim. Possuímos estrutura tecnológica completa para garantir estabilidade e excelência em sustentações e audiências virtuais.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="py-32 bg-slate-900">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="bg-white shadow-2xl overflow-hidden grid lg:grid-cols-3">
+                    <div class="navy-bg p-10 md:p-16 text-white flex flex-col justify-between">
+                        <div>
+                            <span class="gold-text font-bold tracking-[0.4em] uppercase text-xs mb-6 block">Contato</span>
+                            <h2 class="text-4xl font-bold mb-10 serif-font italic">Conecte-se <br> Conosco.</h2>
+                            <div class="space-y-10">
+                                <div class="flex gap-6">
+                                    <i class="fas fa-map-marker-alt text-lg gold-text mt-1"></i>
+                                    <div>
+                                        <h4 class="font-bold text-xs uppercase tracking-widest mb-1">Palmas, TO</h4>
+                                        <p class="text-xs opacity-70">Edifício Homaidan, 104 Norte</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-6">
+                                    <i class="fas fa-phone-alt text-lg gold-text mt-1"></i>
+                                    <div>
+                                        <h4 class="font-bold text-xs uppercase tracking-widest mb-1">Atendimento</h4>
+                                        <p class="text-xs opacity-70">(63) 99999-9999</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-6">
+                                    <i class="fas fa-envelope text-lg gold-text mt-1"></i>
+                                    <div>
+                                        <h4 class="font-bold text-xs uppercase tracking-widest mb-1">E-mail</h4>
+                                        <p class="text-xs opacity-70">contato@dalsasso.adv.br</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 mt-16 border-t border-white/5 pt-10">
+                            <a href="https://instagram.com/rsdadv" target="_blank" aria-label="Aceder ao nosso Instagram" class="text-lg hover:text-amber-500 transition-all"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Aceder ao nosso LinkedIn" class="text-lg hover:text-amber-500 transition-all"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Formulário de Contato com Validação e Interatividade -->
+                    <div class="p-10 md:p-16 col-span-2 textured-section">
+                        <h3 class="text-xl md:text-2xl font-bold navy-text mb-10 uppercase tracking-[0.2em]">Solicitação de Contato</h3>
+                        <form id="contactForm" class="space-y-10">
+                            <div class="grid md:grid-cols-2 gap-10">
+                                <div class="relative">
+                                    <label class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-2 block" for="nome">Seu Nome</label>
+                                    <input type="text" id="nome" name="nome" required class="w-full border-b border-gray-200 py-3 focus:border-amber-600 focus:outline-none transition-all text-sm bg-transparent">
+                                </div>
+                                <div class="relative">
+                                    <label class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-2 block" for="email">E-mail Profissional</label>
+                                    <input type="email" id="email" name="email" required class="w-full border-b border-gray-200 py-3 focus:border-amber-600 focus:outline-none transition-all text-sm bg-transparent">
+                                </div>
+                            </div>
+                            <div class="relative">
+                                <label class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-2 block" for="interesse">Área de Interesse</label>
+                                <select id="interesse" name="interesse" required class="w-full border-b border-gray-200 py-3 focus:border-amber-600 focus:outline-none transition-all text-sm bg-transparent">
+                                    <option value="" disabled selected>Selecione uma opção</option>
+                                    <option value="correspondencia">Correspondência Jurídica</option>
+                                    <option value="civil_familia">Consultoria Civil / Família</option>
+                                    <option value="penal">Defesa Penal</option>
+                                    <option value="outros">Outros Assuntos</option>
+                                </select>
+                            </div>
+                            <div class="relative">
+                                <label class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-2 block" for="mensagem">Sua Mensagem</label>
+                                <textarea id="mensagem" name="mensagem" rows="4" required class="w-full border-b border-gray-200 py-3 focus:border-amber-600 focus:outline-none transition-all text-sm bg-transparent"></textarea>
+                            </div>
+                            <button type="submit" id="submitBtn" class="btn-gold text-white font-bold tracking-[0.3em] uppercase py-5 px-12 md:px-16 text-xs shadow-2xl w-full md:w-auto flex items-center justify-center">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-slate-900 text-slate-500 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-4 group">
+                <img src="images/logomarca_rsdv.png" alt="Logo Rodrigues Dalsasso" loading="lazy" class="h-10 w-auto opacity-70 group-hover:opacity-100 transition-opacity">
+                <div class="text-left border-l border-white/10 pl-4">
+                    <p class="text-white font-bold leading-none tracking-widest text-sm">RODRIGUES DALSASSO</p>
+                    <p class="text-[9px] md:text-[10px] uppercase tracking-tighter opacity-50 mt-1">OAB/TO 8260 | Advocacia & Consultoria</p>
+                </div>
+            </div>
+            <div class="flex gap-6">
+                <a href="https://instagram.com/rsdadv" target="_blank" aria-label="Siga o Dr. Frank no Instagram" class="text-slate-400 hover:text-white transition-all text-sm flex items-center gap-2">
+                    <i class="fab fa-instagram text-lg"></i> Instagram
+                </a>
+            </div>
+            <p class="text-[10px] uppercase tracking-widest font-medium text-center md:text-right">&copy; 2024 Frank Willian Rodrigues de Souza Dalsasso. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating -->
+    <a href="https://wa.me/5563999999999" target="_blank" aria-label="Fale connosco pelo WhatsApp" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 w-14 h-14 bg-green-500 text-white rounded-full shadow-2xl flex items-center justify-center text-2xl hover:bg-green-600 transition-all z-50 hover:scale-110">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Inicialização das Animações
+        AOS.init({ once: true, duration: 800 });
+
+        // Controlo do Menu Mobile
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Controlo das Perguntas Frequentes (FAQ)
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Fecha todos os itens e reseta atributos aria
+            document.querySelectorAll('.faq-item').forEach(el => {
+                el.classList.remove('active');
+                el.querySelector('button').setAttribute('aria-expanded', 'false');
+                el.querySelector('i').classList.replace('fa-minus', 'fa-plus');
+            });
+
+            // Abre o selecionado
+            if (!isActive) {
+                item.classList.add('active');
+                button.setAttribute('aria-expanded', 'true');
+                button.querySelector('i').classList.replace('fa-plus', 'fa-minus');
+            }
+        }
+
+        // Efeito Glassmorphism na Navbar ao fazer scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 80) {
+                nav.classList.add('bg-opacity-95', 'backdrop-blur-lg');
+                nav.style.padding = '5px 0';
+            } else {
+                nav.classList.remove('bg-opacity-95', 'backdrop-blur-lg');
+                nav.style.padding = '15px 0';
+            }
+        });
+
+        // Feedback Interativo no Formulário de Contato
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Previne recarregamento da página
+            
+            const btn = document.getElementById('submitBtn');
+            const originalText = btn.innerHTML;
+            
+            // Estado: A processar
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-3"></i> A Enviar...';
+            btn.classList.add('opacity-80', 'cursor-not-allowed');
+            
+            // Simulação de tempo de envio (Substituir pela requisição AJAX real depois)
+            setTimeout(() => {
+                // Estado: Sucesso
+                btn.innerHTML = '<i class="fas fa-check mr-3"></i> Mensagem Recebida!';
+                btn.classList.replace('btn-gold', 'bg-green-600');
+                this.reset(); // Limpa o formulário
+                
+                // Volta ao estado original após 4 segundos
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.replace('bg-green-600', 'btn-gold');
+                    btn.classList.remove('opacity-80', 'cursor-not-allowed');
+                }, 4000);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
