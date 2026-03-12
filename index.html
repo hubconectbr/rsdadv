@@ -751,8 +751,47 @@ CEP: 77.015-456</p>
             counterObserver.observe(counterSection);
         }
     </script>
+
+    <script>
+    const form = document.getElementById('contactForm');
+    const btn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Impede a página de recarregar
+        
+        // Estado de "Enviando"
+        btn.disabled = true;
+        btn.style.opacity = "0.7";
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> PROCESSANDO...';
+
+        const formData = new FormData(form);
+        const url = "https://script.google.com/macros/s/AKfycbyWNDZmYYJgR9Ovr_BzePhFSWtndkKgRb12POlRL3mTcOCsmW6-YiCAjlkB5DRWzQ9jVw/exec";
+
+        fetch(url, {
+            method: 'POST',
+            body: new URLSearchParams(formData)
+        })
+        .then(res => {
+            // Sucesso
+            alert('Mensagem enviada com sucesso! Frank Willian receberá seu contato em breve.');
+            form.reset(); // Limpa os campos
+        })
+        .catch(error => {
+            // Erro
+            alert('Houve um erro técnico. Por favor, tente o contato via WhatsApp ou E-mail diretamente.');
+            console.error('Erro no envio:', error);
+        })
+        .finally(() => {
+            // Restaura o botão
+            btn.disabled = false;
+            btn.style.opacity = "1";
+            btn.innerHTML = 'Enviar Mensagem';
+        });
+    });
+</script>
 </body>
 </html>
+
 
 
 
